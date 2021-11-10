@@ -1,0 +1,14 @@
+{
+  "name": "convertTxtToJson",
+  "version": "1.0.0",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  },
+  "bin": {
+    "parseTxtToJson": "bin/parseTxtToJson"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "preferGlobal": true
+}
