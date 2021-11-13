@@ -4,9 +4,7 @@ const error = require('./utils/error');
 const help = require('./cmds/help');
 const version = require('./cmds/version');
 
-module.exports = () => {
-    const args = minimist(process.argv.slice(2));
-
+function getCommand(args) {
     let cmd = args._[0] || 'help';
 
     if (args.version || args.v) {
@@ -17,6 +15,9 @@ module.exports = () => {
         cmd = 'help';
     }
 
+    return cmd;
+}
+function handleCommand(cmd, args) {
     switch (cmd) {
         case 'parse':
             parse(args);
@@ -31,4 +32,10 @@ module.exports = () => {
             error(`"${cmd}" is not a valid command!`, true);
             break;
     }
+}
+
+module.exports = () => {
+    const args = minimist(process.argv.slice(2));
+    const cmd = getCommand(args);
+    handleCommand(cmd, args);
 }
