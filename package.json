@@ -1,17 +1,28 @@
 {
-  "name": "convertTxtToJson",
-  "version": "1.0.0",
+  "name": "parse-txt-to-json",
+  "version": "1.0.1",
   "dependencies": {
     "minimist": "^1.2.5"
   },
   "bin": {
     "parseTxtToJson": "bin/parseTxtToJson"
   },
+  "keyword": [
+    "json",
+    "parse",
+    "text",
+    "cli"
+  ],
+  "main": "index.js",
   "engines": {
     "node": ">=8"
   },
   "scripts": {
     "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barradas/parseTxtToJson.git"
   },
   "preferGlobal": true,
   "devDependencies": {

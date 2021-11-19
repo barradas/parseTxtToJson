@@ -9,8 +9,8 @@ const menus = {
     parse: `
     convertTextToJson parse <options>
 
-    --filepath, -l ..... the absolute filepath of the source file 
-    --output, -o ... the absolute output filepath`,
+    --filepath, -l ..... the filepath to the txt file 
+    --output, -o ... the file path of the output json file`,
 }
 
 module.exports = (args) => {

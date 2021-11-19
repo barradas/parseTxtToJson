@@ -2,7 +2,7 @@ const fs = require('fs');
 const error = require('../utils/error');
 
 async function parseToJsonFile(args) {
-    fs.readFile(args.filePath, 'utf8', (err, data) => {
+    fs.readFile(args.filepath, 'utf8', (err, data) => {
         if (err) {
             throw new Error(err);
         }
@@ -20,8 +20,7 @@ async function parseToJsonFile(args) {
 }
 
 module.exports = async (args) => {
-
-    const FILE_PATH = args.filePath || args.f;
+    const FILE_PATH = args.filepath || args.f;
     const OUTPUT_PATH = args.output || args.o;
 
     if (!FILE_PATH) {

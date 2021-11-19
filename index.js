@@ -34,8 +34,10 @@ function handleCommand(cmd, args) {
     }
 }
 
-module.exports = () => {
+function parseTxtToJson() {
     const args = minimist(process.argv.slice(2));
     const cmd = getCommand(args);
     handleCommand(cmd, args);
 }
+
+module.exports = parseTxtToJson;
